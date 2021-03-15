@@ -1,49 +1,30 @@
-noremap <Space> <nop>
-let mapleader="\<Space>"
-" highlight current line
-set cursorline 
-
-""" VIM UI
-" Always show current position
-"set ruler
-" Height of the command bar
+set clipboard=unnamed,unnamedplus
+syntax enable
+set ruler
 "set cmdheight=2
-" Ignore case when searching
 set ignorecase
-" This makes the search case sensitive if uppercase is entered
 set smartcase
-" Highlight search results
 set hlsearch
-" Makes search act like search in modern browsers
 set incsearch
-" Show matching brackets
 "set showmatch
-" Turn on wild menu
 "set wildmenu
-
-""" Colors and Fonts
-" Enable syntax highlighting
-"syntax enable
-
-""" Text, tab and indent related
-" Use spaces instead of tabs
 set expandtab
-" Be smart when using tabs
 "set smarttab
-" Auto indent, smart indent, wrap lines
 set ai
 "set si
-set wrap
+set nowrap
+set cursorline 
 
-""" Moving around, tabs, windows and buffers
-" Treat long lines as break lines (useful when moving around in them)
+noremap <Space> <nop>
+let mapleader="\<Space>"
+
 noremap j gj
 noremap k gk
 nmap J 5j
 nmap K 5k
 vmap J 5j
 vmap K 5k
-" Smart way to move between windows
+" move between windows
 nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -73,5 +54,11 @@ nnoremap <Leader>/ :noh<CR>
 
 " save
 nnoremap <Leader>w :w<CR> 
- " save and exit
+" save and exit
 nnoremap <Leader>q :wq<CR>
+" put to next line
+nnoremap <Leader>i i<CR><ESC>
+" put to next line
+nnoremap <Leader>a a<CR><ESC>
+" comment line
+nnoremap <Leader>c <c-:>
